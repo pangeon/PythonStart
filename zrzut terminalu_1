@@ -1,0 +1,141 @@
+cecherz@cecherz-VirtualBox:~$ cd Python
+cecherz@cecherz-VirtualBox:~/Python$ ls -l
+razem 4
+-rw-rw-r-- 1 cecherz cecherz 230 paź 29 16:52 test.py
+cecherz@cecherz-VirtualBox:~/Python$ python3 -m venv myvenv
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt-get install python3-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: ['/home/cecherz/Python/myvenv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']
+
+cecherz@cecherz-VirtualBox:~/Python$ sudo apt install python3-venv
+[sudo] hasło użytkownika cecherz: 
+Czytanie list pakietów... Gotowe
+Budowanie drzewa zależności       
+Odczyt informacji o stanie... Gotowe
+The following additional packages will be installed:
+  python-pip-whl python3.6-venv
+Zostaną zainstalowane następujące NOWE pakiety:
+  python-pip-whl python3-venv python3.6-venv
+0 aktualizowanych, 3 nowo instalowanych, 0 usuwanych i 3 nieaktualizowanych.
+Konieczne pobranie 1 660 kB archiwów.
+Po tej operacji zostanie dodatkowo użyte 1 900 kB miejsca na dysku.
+Kontynuować? [T/n] t
+Pobieranie:1 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 python-pip-whl all 9.0.1-2.3~ubuntu1 [1 652 kB]
+Pobieranie:2 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 python3.6-venv amd64 3.6.6-1~18.04 [6 184 B]
+Pobieranie:3 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 python3-venv amd64 3.6.5-3ubuntu1 [1 208 B]
+Pobrano 1 660 kB w 2s (926 kB/s)     
+Wybieranie wcześniej niewybranego pakietu python-pip-whl.
+(Odczytywanie bazy danych ... 307974 pliki i katalogi obecnie zainstalowane.)
+Przygotowywanie do rozpakowania pakietu .../python-pip-whl_9.0.1-2.3~ubuntu1_all.deb ...
+Rozpakowywanie pakietu python-pip-whl (9.0.1-2.3~ubuntu1) ...
+Wybieranie wcześniej niewybranego pakietu python3.6-venv.
+Przygotowywanie do rozpakowania pakietu .../python3.6-venv_3.6.6-1~18.04_amd64.deb ...
+Rozpakowywanie pakietu python3.6-venv (3.6.6-1~18.04) ...
+Wybieranie wcześniej niewybranego pakietu python3-venv.
+Przygotowywanie do rozpakowania pakietu .../python3-venv_3.6.5-3ubuntu1_amd64.deb ...
+Rozpakowywanie pakietu python3-venv (3.6.5-3ubuntu1) ...
+Konfigurowanie pakietu python-pip-whl (9.0.1-2.3~ubuntu1) ...
+Konfigurowanie pakietu python3.6-venv (3.6.6-1~18.04) ...
+Przetwarzanie wyzwalaczy pakietu man-db (2.8.3-2ubuntu0.1)...
+Konfigurowanie pakietu python3-venv (3.6.5-3ubuntu1) ...
+cecherz@cecherz-VirtualBox:~/Python$ python3 -m venv myvenv
+cecherz@cecherz-VirtualBox:~/Python$ ls -l
+razem 8
+drwxrwxr-x 6 cecherz cecherz 4096 paź 29 17:03 myvenv
+-rw-rw-r-- 1 cecherz cecherz  230 paź 29 16:52 test.py
+cecherz@cecherz-VirtualBox:~/Python$ source myvenv/bin/activate
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ python3 -m pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/c2/d7/90f34cb0d83a6c5631cf71dfe64cc1054598c843a92b400e55675cc2ac37/pip-18.1-py2.py3-none-any.whl (1.3MB)
+    100% |████████████████████████████████| 1.3MB 1.1MB/s 
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-18.1
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ pip install -r requirements.txt
+Collecting Django~=2.1.2 (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/32/ab/22530cc1b2114e6067eece94a333d6c749fa1c56a009f0721e51c181ea53/Django-2.1.2-py3-none-any.whl (7.3MB)
+    100% |████████████████████████████████| 7.3MB 5.1MB/s 
+Collecting pytz (from Django~=2.1.2->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/f8/0e/2365ddc010afb3d79147f1dd544e5ee24bf4ece58ab99b16fbb465ce6dc0/pytz-2018.7-py2.py3-none-any.whl (506kB)
+    100% |████████████████████████████████| 512kB 9.7MB/s 
+Installing collected packages: pytz, Django
+Successfully installed Django-2.1.2 pytz-2018.7
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ django-admin startproject mysite .
+myvenv) cecherz@cecherz-VirtualBox:~/Python$ ls -l
+razem 20
+-rwxrwxr-x 1 cecherz cecherz  538 paź 29 17:30 manage.py
+drwxrwxr-x 2 cecherz cecherz 4096 paź 29 17:30 mysite
+drwxrwxr-x 6 cecherz cecherz 4096 paź 29 17:03 myvenv
+drwxrwxr-x 2 cecherz cecherz 4096 paź 29 17:31 other
+-rw-rw-r-- 1 cecherz cecherz   14 paź 29 17:09 requirements.txt
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ cd mysite
+(myvenv) cecherz@cecherz-VirtualBox:~/Python/mysite$ tree
+.
+├── __init__.py
+├── settings.py
+├── urls.py
+└── wsgi.py
+
+0 directories, 4 files
+(myvenv) cecherz@cecherz-VirtualBox:~/Python/mysite$ cd ..
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ manage.py migrate
+manage.py: nie znaleziono polecenia
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ ls -l
+razem 20
+-rwxrwxr-x 1 cecherz cecherz  538 paź 29 17:30 manage.py
+drwxrwxr-x 2 cecherz cecherz 4096 paź 29 17:41 mysite
+drwxrwxr-x 6 cecherz cecherz 4096 paź 29 17:03 myvenv
+drwxrwxr-x 2 cecherz cecherz 4096 paź 29 17:31 other
+-rw-rw-r-- 1 cecherz cecherz   14 paź 29 17:09 requirements.txt
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ manage.py migrate
+manage.py: nie znaleziono polecenia
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(myvenv) cecherz@cecherz-VirtualBox:~/Python$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2018 - 17:42:39
+Django version 2.1.2, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[29/Oct/2018 17:43:03] "GET / HTTP/1.1" 200 16427
+[29/Oct/2018 17:43:03] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+Not Found: /favicon.ico
+[29/Oct/2018 17:43:03] "GET /favicon.ico HTTP/1.1" 404 1972
+[29/Oct/2018 17:43:03] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[29/Oct/2018 17:43:03] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[29/Oct/2018 17:43:03] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[29/Oct/2018 17:46:07] "GET / HTTP/1.1" 200 16427
+[29/Oct/2018 17:46:08] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+Not Found: /favicon.ico
+[29/Oct/2018 17:46:08] "GET /favicon.ico HTTP/1.1" 404 1972
+[29/Oct/2018 17:46:08] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[29/Oct/2018 17:46:08] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+
