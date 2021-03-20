@@ -1,13 +1,16 @@
-# TODO: Change programme language to english
 operation = input(
-    "\n-sum (suma) \n-min (odejmowanie) \n-mult (mnożenie) \n-div (dzielenie) \n-pow (potęgowanie)\n")
-print("Wybrałeś operacje: " + operation + "(x, y)")
+    "\n-sum (sum)"
+    + "\n-min (sustraction)"
+    + "\n-mult (multiplication)"
+    + "\n-div (division)"
+    + "\n-pow (exponentiation)\n")
+print("You choose operation: " + operation + "(x, y)")
 
 while(operation):
-    x = int(input("Wpisz pierwszy argument\n"))
-    y = int(input("Wpisz drugi argument\n"))
-    print("Podane argumenty to:\nx = " + str(x) + " y = " + str(y))
-    print("Wynik operacji " + operation +
+    x = int(input("Enter first argument\n"))
+    y = int(input("Enter second argument\n"))
+    print("The arguments given are:\nx = " + str(x) + " y = " + str(y))
+    print("The result of the operation " + operation +
           "(" + str(x) + "," + str(y) + ") to:")
 
     if (operation == "sum"):
@@ -24,13 +27,17 @@ while(operation):
             print(x / y)
             break
         else:
-            print("Dzielenie przez zero jest niemożliwe")
+            print("Division by zero is impossible")
             break
     elif (operation == "pow"):
         print(x ** y)
         break
     else:
-        print("Operacja " + operation + " nie istnieje")
+        print("Operation " + operation + " not exist")
         operation = input(
-            "Podaj rodzaj wykonywanej operacji, dostępne:\n-sum (suma) \n-min (odejmowanie) \n-mult (mnożenie) \n-div (dzielenie) \n-pow (potęgowanie)\n")
-        print("Wybrałeś operacje: " + operation + "(x, y)")
+            "\n-sum (sum)"
+            + "\n-min (sustraction)"
+            + "\n-mult (multiplication)"
+            + "\n-div (division)"
+            + "\n-pow (exponentiation)\n")
+        print("You choose operation: " + operation + "(x, y)")

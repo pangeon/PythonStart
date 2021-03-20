@@ -1,11 +1,10 @@
-# TODO: Something is wrong. Program not running.
-
+# TODO: Add a new language for capitals names
 import random
 
-print("** Pytacz wersja 1.0 by Kamil Cecherz **")
-print("info: Nazwy stolic podawaj z wielkiej litery")
+print("** Pytacz version 1.1 by Kamil Cecherz **")
+print("info: Enter the names of the countries in capital letters in Polish.")
 
-my_file = open("capitals.txt", "r").read()
+my_file = open("capitals.txt", "r", encoding="utf8").read()
 basefile = my_file.split("\n")
 
 rand = random.randint(1, 52)
@@ -15,11 +14,11 @@ question = basefile[rand].split(": ")
 flag = False
 
 while(flag == False):
-    print("Jaka jest stolica państwa " + question[0] + ":\n")
-    answer = input("Moja odpowiedź to: ")
+    print("What is the capital of the country " + question[0] + ":\n")
+    answer = input("My answer is: ")
 
     if(question[1] == answer):
-        print("Dobrze brawo")
+        print("Good. Bravo.")
         flag = True
     else:
-        print("Niestety odpowiedź jest błędna")
+        print("Unfortunately your answer is wrong !")

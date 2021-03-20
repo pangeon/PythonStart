@@ -1,20 +1,19 @@
 # memorem 0.1 by Kamil Cecherz #
-# TODO: Something is wrong. Encoding is not correct.
-print("** Witaj w programie memorem **")
+print("** Welcome in Memorem App **")
 operation = None
 
 while(operation != "exit"):
 
-    print("exit - wyjście z programu")
-    print("open - przegląd bazy słówek")
-    print("write - edycja bazy słówek")
+    print("exit - leave program")
+    print("open - show word base")
+    print("write - add new note")
 
-    operation = input("Wydaj polecenie: ")
+    operation = input("Give the command: ")
     if(operation == "exit"):
-        print("\nZakończenie programu:")
+        print("\nEnd program:")
     elif(operation == "open"):
-        print("Otwarto bazę słówek")
-        basefile = open("txt/baza.txt", "r")
+        print("You opened words base")
+        basefile = open("txt/words_base.txt", "r", encoding="utf-8")
 
         i = 0
         for line in basefile:
@@ -24,15 +23,16 @@ while(operation != "exit"):
         basefile.close()
 
     elif(operation == "write"):
-        print("Zapis słówek do bazy:")
-        basefile_user = open("txt/user_base.txt", "w")
+        print("Writing notes into the file:")
+        basefile_user = open("txt/notes_base.txt", "w", encoding="utf-8")
         basefile_user.write((input(
-            "Wpisz nową notakę i zatwierdź (ENTER):\n Poprzedni plik zostanie nadpisany.")))
-        basefile_user = open("txt/user_base.txt", "r")
+            "Type in a new note and confirm (ENTER): \n"
+            + "The previous file will be overwritten.\n")))
+        basefile_user = open("txt/notes_base.txt", "r", encoding="utf-8")
         i = 0
         for line in basefile_user:
             print(str(i) + ". " + line)
             i += 1
 
-        print("Dadano nową notatkę !")
+        print("Add new note !")
         basefile_user.close()

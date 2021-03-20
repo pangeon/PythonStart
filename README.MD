@@ -5,6 +5,7 @@ Functional simple programs and exercises.
 ## DEPLOYMENT GUIDE
 
 ### WINDOWS
+
 1. Download Python from [python.org](https://www.python.org/downloads/windows/)
 
 2. Check instalation and run programs via command line:
@@ -16,6 +17,7 @@ py --version
 
 python <file-name>.py
 ```
+
 ### LINUX
 
 There is no need to install Python on Linux as it comes preinstalled. After opening the Terminal, the first thing to do is to create a folder that will contain all of the Python files.
@@ -23,44 +25,46 @@ There is no need to install Python on Linux as it comes preinstalled. After open
 ### MAC OS
 
 ## CONTENT
+
 ---
+
 ### APPS
 
 1. coder
 
-    * Generates random long string look likes code. 
+   - Generates random long string look likes code.
 
 2. comb-calc
 
-    * Math tools to binomial theorem.
+   - Math tools to binomial theorem.
 
 3. memorem
 
-    * Programme for learn english irregular verbs. 
+   - Programme for learn english irregular verbs.
 
 4. pytacz
 
-    * Programme for learn geography: countries and their capitals.
+   - Programme for learn geography: countries and their capitals.
 
 5. pytcalc
 
-    * Command line calculator.
+   - Command line calculator.
 
 #### APPS TROUBLES
 
-comb-calc
-* programme language is polish.
-
 memorem
-* encoding is not correct, data is bad displaying.
+
+- add possibility to read notes
+- add possibility to edit fragments of notes
 
 pytacz
-* something is wrong, program not running.
+
+- add a new language for capitals names
+
+pytcalc
+
+- better handle user input operation
 
 ### TRAINING
 
-Training python programs 
-
-
-
-
+Training python programs

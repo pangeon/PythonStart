@@ -1,4 +1,3 @@
-# TODO: Change programme language to english
 def decorator(func):
     def wrap():
         print("===============================================")
@@ -6,9 +5,11 @@ def decorator(func):
         print("===============================================")
     return wrap
 
+
 @decorator
 def welcome():
     print("Comb-Calc v 1.0 by Kamil Cecherz")
+
 
 def newton(x):
     if x == 1:
@@ -16,32 +17,37 @@ def newton(x):
     else:
         return x * newton(x-1)
 
+
 def probability(n, k):
     if n > k:
-        message = "Ilość podzbiorów " + \
-            str(k) + "-elementowych w zbiorze " + str(n) + "-elementowym"
+        message = "Number of subsets " + \
+            str(k) + "-elements in the set " + str(n) + "-elemental"
         print(message)
         z = int(newton(n - k))
         n = int(newton(n))
         k = int(newton(k))
         P = int(n / (k * z))
         print(str(n) + " / " + str(k) + " * " + str(z) + "\n")
-        print("Ilość kombinacji: " + str(P))
+        print("Number of combinations: " + str(P))
     else:
-        print("Parametr n musi być większy od parametru k\n")
+        print("The parameter n must be greater than the parameter k\n")
+
 
 def prob_test():
-    n = int(input("Podaj parametr n:\n"))
-    k = int(input("Podaj parametr k:\n"))
+    n = int(input("Enter the parameter n:\n"))
+    k = int(input("Enter the parameter k:\n"))
     s = (probability(n, k))
     return s
 
+
 def end():
-    print("Zakończono obliczenia")
+    print("Calculations have been completed")
+
 
 def main():
     welcome()
     prob_test()
     end()
+
 
 main()
