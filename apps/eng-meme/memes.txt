@@ -1,0 +1,5 @@
+| MEANING ENG    | MEANING POL    | ADDED ON
+| love           | miłość         | 2021-03-20
+| flower         | kwiatek        | 2021-03-20
+| bird           | ptak           | 2021-03-20
+| sun            | słońce         | 2021-03-20

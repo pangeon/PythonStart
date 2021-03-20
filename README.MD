@@ -50,6 +50,10 @@ There is no need to install Python on Linux as it comes preinstalled. After open
 
    - Command line calculator.
 
+6. eng-meme
+
+   - Simple dictionary ENG-POL.
+
 #### APPS TROUBLES
 
 memorem
