@@ -1,6 +1,6 @@
 # PYTHON START
 
-Functional simple programs, games and exercises. Python is easygoing langueage.
+Functional simple programs, games and exercises. Python is easygoing language.
 
 ## DEPLOYMENT GUIDE
 
@@ -79,7 +79,7 @@ pytcalc
                                           |     O
                                           |    /|\
                                           |    / \
-                                          /|\
+                                         /|\
    ```
 
    - DESCRIPTION
@@ -98,6 +98,8 @@ pytcalc
 
    - PREVIEW 1.4
      - load data to application from external source
+
+INSPIRED BY [Kamil Brzeziński](https://github.com/kamilbrzezinski/python-5-projektow/blob/master/01-wisielec.py)
 
 ### TRAINING
 
