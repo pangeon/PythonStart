@@ -1,6 +1,6 @@
 # PYTHON START
 
-Functional simple programs and exercises.
+Functional simple programs, games and exercises. Python is easygoing langueage.
 
 ## DEPLOYMENT GUIDE
 
@@ -68,6 +68,36 @@ pytacz
 pytcalc
 
 - better handle user input operation
+
+### GAMES
+
+1. hangman
+
+   ```
+                                          _______
+                                          |     |
+                                          |     O
+                                          |    /|\
+                                          |    / \
+                                          /|\
+   ```
+
+   - DESCRIPTION
+
+     - Try to guess the word either you die.
+
+   - CHANGELOG
+
+     - 1.0 Game essentials
+
+   - PREVIEW 1.3
+
+     - validation user data
+     - drawing the state of the game using characters
+     - add level of difficulty
+
+   - PREVIEW 1.4
+     - load data to application from external source
 
 ### TRAINING
 

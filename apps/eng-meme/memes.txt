@@ -1,5 +1,27 @@
 | MEANING ENG    | MEANING POL    | ADDED ON
-| love           | miłość         | 2021-03-20
-| flower         | kwiatek        | 2021-03-20
-| bird           | ptak           | 2021-03-20
-| sun            | słońce         | 2021-03-20
+| scuba          | nurkować       | 2021-03-21
+| give up        | poddać         | 2021-03-21
+| get back       | wrócić         | 2021-03-21
+| persistent     | wytrwały       | 2021-03-21
+| summary        | streszczenie   | 2021-03-21
+| give up sth    | poddać się     | 2021-03-21
+| trumpet        | trąbka         | 2021-03-21
+| efford         | wysiłek        | 2021-03-21
+| mend           | naprawiać      | 2021-03-21
+| judge          | oceniać        | 2021-03-21
+| insist         | nalegać        | 2021-03-21
+| divided up     | podzielone     | 2021-03-21
+| affectionate   | czuły          | 2021-03-21
+| complain       | skarżyć się    | 2021-03-21
+| compulsory     | obowiązkowy    | 2021-03-21
+| go off         | być wyłączonym | 2021-03-21
+| get up         | wstać          | 2021-03-21
+| throw out      | wyrzucić       | 2021-03-21
+| hall           | korytarz       | 2021-03-21
+| despise        | gardzić        | 2021-03-21
+| going off      | odezwać się    | 2021-03-21
+| swipe through  | skrolować      | 2021-03-21
+| get in touch   | kontaktować się| 2021-03-21
+| keep posting   | publikować     | 2021-03-21
+| take out       | wyjąć          | 2021-03-21
+| instead        | zamiast        | 2021-03-21
