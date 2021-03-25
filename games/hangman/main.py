@@ -1,8 +1,16 @@
-version = 1.0
-lives = 5
+import utils
+import visual
+import sys
 
 word_to_guess = "yellow"
 hint = "Name of color"
+
+word_list = []
+word_list = utils.get_mock_list(word_to_guess, "_")
+
+used_letters = []
+
+version = 1.0
 
 
 def print_welcome_header():
@@ -14,39 +22,43 @@ def print_question():
     print("You try guess letter in the word.\n")
 
 
-def get_empty_game_board():
-    game_board = []
-    amount_of_letters = len(word_to_guess)
-
-    for _ in range(amount_of_letters):
-        game_board.append("_")
-
-    return game_board
-
-
-def get_filled_game_board():
-    game_board = []
-
-    for index in word_to_guess:
-        game_board.append(index)
-
-    return game_board
-
-
-def show_lives_amount():
-    print("LIVES: " + str(lives) + "\n")
-
-
-def user_guess_the_word():
-    print("not implemented yet")
+def print_winner_info():
+    print("You're winner !")
+    print("The word you were looking for is:")
+    utils.print_with_word_decorator(word_to_guess, ' ')
 
 
 def start():
-
     print_welcome_header()
     print_question()
 
-    show_lives_amount()
+    lives = 5
+
+    while True:
+        user_answer = input("\nEnter correct letter in this word\n")
+        used_letters.append(user_answer)
+
+        found_indexes = utils.find_char_occurrences(user_answer, word_to_guess)
+
+        if len(found_indexes) == 0:
+            print("\nLetter not exist in this word\n")
+            lives -= 1
+
+            if lives == 0:
+                utils.print_with_word_decorator("GAME OVER", ' ')
+                print(visual.image_end)
+                sys.exit(0)
+        else:
+            for index in found_indexes:
+                word_list[index] = user_answer
+
+        if utils.concat_list_letters(word_list) == word_to_guess:
+            print_winner_info()
+            sys.exit(0)
+        else:
+            print("\nLIVES: " + str(lives) + "\n")
+            print("Used letters:", used_letters)
+            print(word_list)
 
 
 start()
