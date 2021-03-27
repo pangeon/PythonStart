@@ -89,6 +89,7 @@ pytcalc
    - CHANGELOG
 
      - 1.0 Game essentials
+     - 1.1 Drawing the state of the game using characters
 
    - PREVIEW 1.3
 

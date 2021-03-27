@@ -10,7 +10,7 @@ word_list = utils.get_mock_list(word_to_guess, "_")
 
 used_letters = []
 
-version = 1.0
+version = 1.1
 
 
 def print_welcome_header():
@@ -43,6 +43,8 @@ def start():
         if len(found_indexes) == 0:
             print("\nLetter not exist in this word\n")
             lives -= 1
+
+            visual.show_stage_image(lives)
 
             if lives == 0:
                 utils.print_with_word_decorator("GAME OVER", ' ')
