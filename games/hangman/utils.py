@@ -5,6 +5,12 @@ def print_with_word_decorator(word, decorator):
     print("\n\n-----------------------------")
 
 
+def index_of_set(set, index):
+    if len(set) < index:
+        raise Exception("Index is too large.")
+    return list(set)[index]
+
+
 def concat_list_letters(char_list):
     word = ""
     for elem in char_list:
