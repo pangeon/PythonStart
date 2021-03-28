@@ -5,6 +5,10 @@ def print_with_word_decorator(word, decorator):
     print("\n\n-----------------------------")
 
 
+def fill_breaks(list, sign):
+    print("not implemented yet")
+
+
 def index_of_set(set, index):
     try:
         sorted_list = list(set)

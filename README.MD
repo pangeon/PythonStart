@@ -90,14 +90,25 @@ pytcalc
 
      - 1.0 Game essentials
      - 1.1 Drawing the state of the game using characters
-     - 1.2.2 Difficulty level setting 
-
-   - PREVIEW 1.3
-
-     - validation user data
+     - 1.1.2 Add tests and small corrections
+     - 1.2.2 Difficulty level setting
+     - 1.3.2 Check user data from input
 
    - PREVIEW 1.4
-     - load data to application from external source
+     - Random word to guess
+
+   - PREVIEW 1.5
+     - Load data to application from external source: raw file
+
+   - PREVIEW 2.4
+     - Load data to application from external source: database
+
+   ***TODO***
+
+    - Add automatic fill for empty spaces space in the password to guess
+
+    - Repair problems with modules: path, imports   
+
 
 INSPIRED BY [Kamil Brzeziński](https://github.com/kamilbrzezinski/python-5-projektow/blob/master/01-wisielec.py)
 

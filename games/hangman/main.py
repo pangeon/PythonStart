@@ -1,18 +1,20 @@
 import utils
 import visual
 import settings
+from validate import Validator
 import sys
 
-word_to_guess =  "yellow and black"
+word_to_guess = "yellow and black"
 hint = "Name of color"
 
 word_list = []
 word_list = utils.get_mock_list(word_to_guess, "_")
+
 difficulty_level_names = {"EASY", "MEDIUM", "TOUGHT"}
 
-used_letters = []
+used_letters = set()
 
-version = "1.2.2"
+version = "1.3.2"
 
 
 def print_welcome_header():
@@ -44,21 +46,24 @@ def start():
 
     print_difficulty_level_info()
 
-    user_level_choice = int(input("Enter the number: "))
+    # SETTINGS - DIFFICULTY LEVEL
+    user_level_choice = Validator.catch_incorrect_value(
+        input("Enter the number: "), Validator.warining_message)
 
-    # EASY, MEDIUM, HARD
     if user_level_choice < 3 and user_level_choice > -1:
-        difficulty_name = utils.index_of_set(difficulty_level_names, user_level_choice)
-        print("You chose " + utils.index_of_set(difficulty_level_names, user_level_choice))
+        difficulty_name = utils.index_of_set(
+            difficulty_level_names, user_level_choice)
+        print("You chose " +
+              utils.index_of_set(difficulty_level_names, user_level_choice))
         lives = settings.set_difficulty_level(difficulty_name)
     else:
         difficulty_name = utils.index_of_set(difficulty_level_names, 1)
         lives = settings.set_difficulty_level(difficulty_name)
+    # SETTINGS - DIFFICULTY LEVEL
 
-    
     while True:
         user_answer = input("\nEnter correct letter in this word\n")
-        used_letters.append(user_answer)
+        used_letters.add(user_answer)
 
         found_indexes = utils.find_char_occurrences(user_answer, word_to_guess)
 
