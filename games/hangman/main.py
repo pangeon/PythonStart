@@ -3,16 +3,16 @@ import visual
 import settings
 import sys
 
-word_to_guess = "yellow and black"
+word_to_guess =  "yellow and black"
 hint = "Name of color"
 
 word_list = []
 word_list = utils.get_mock_list(word_to_guess, "_")
-difficulty_level_names = {"EASY", "MEDIUM", "HARD"}
+difficulty_level_names = {"EASY", "MEDIUM", "TOUGHT"}
 
 used_letters = []
 
-version = "1.1.1"
+version = "1.2.2"
 
 
 def print_welcome_header():
@@ -33,9 +33,9 @@ def print_winner_info():
 
 def print_difficulty_level_info():
     print("Set game diffilculty\n")
-    print("1 -- EASY\n")
-    print("2 -- MEDIUM\n")
-    print("3 -- HARD\n")
+    print("0 -- EASY\n")
+    print("1 -- MEDIUM\n")
+    print("2 -- TOUGHT\n")
 
 
 def start():
@@ -47,9 +47,15 @@ def start():
     user_level_choice = int(input("Enter the number: "))
 
     # EASY, MEDIUM, HARD
-    difficulty_name = utils.index_of_set(difficulty_level_names, 1)
-    lives = settings.set_difficulty_level(difficulty_name)
+    if user_level_choice < 3 and user_level_choice > -1:
+        difficulty_name = utils.index_of_set(difficulty_level_names, user_level_choice)
+        print("You chose " + utils.index_of_set(difficulty_level_names, user_level_choice))
+        lives = settings.set_difficulty_level(difficulty_name)
+    else:
+        difficulty_name = utils.index_of_set(difficulty_level_names, 1)
+        lives = settings.set_difficulty_level(difficulty_name)
 
+    
     while True:
         user_answer = input("\nEnter correct letter in this word\n")
         used_letters.append(user_answer)

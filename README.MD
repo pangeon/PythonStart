@@ -90,12 +90,11 @@ pytcalc
 
      - 1.0 Game essentials
      - 1.1 Drawing the state of the game using characters
+     - 1.2.2 Difficulty level setting 
 
    - PREVIEW 1.3
 
      - validation user data
-     - drawing the state of the game using characters
-     - add level of difficulty
 
    - PREVIEW 1.4
      - load data to application from external source

@@ -6,9 +6,13 @@ def print_with_word_decorator(word, decorator):
 
 
 def index_of_set(set, index):
-    if len(set) < index:
-        raise Exception("Index is too large.")
-    return list(set)[index]
+    try:
+        sorted_list = list(set)
+        sorted_list.sort()
+        return sorted_list[index]
+    except IndexError:
+        print("Index must be smaller than set size")
+        return -1
 
 
 def concat_list_letters(char_list):
