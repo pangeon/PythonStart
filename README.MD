@@ -69,6 +69,10 @@ pytcalc
 
 - better handle user input operation
 
+dice-prob
+
+- introduction to data science: joy with dice game
+
 ### GAMES
 
 1. hangman
@@ -95,20 +99,21 @@ pytcalc
      - 1.3.2 Check user data from input
 
    - PREVIEW 1.4
+
      - Random word to guess
 
    - PREVIEW 1.5
+
      - Load data to application from external source: raw file
 
    - PREVIEW 2.4
      - Load data to application from external source: database
 
-   ***TODO***
+   **_TODO_**
 
-    - Add automatic fill for empty spaces space in the password to guess
+   - Add automatic fill for empty spaces space in the password to guess
 
-    - Repair problems with modules: path, imports   
-
+   - Repair problems with modules: path, imports
 
 INSPIRED BY [Kamil Brzeziński](https://github.com/kamilbrzezinski/python-5-projektow/blob/master/01-wisielec.py)
 
