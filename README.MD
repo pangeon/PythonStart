@@ -52,7 +52,11 @@ There is no need to install Python on Linux as it comes preinstalled. After open
 
 6. eng-meme
 
-   - Simple dictionary ENG-POL.
+   - The simple dictionary ENG-POL.
+    
+7. dice-prob
+   
+    - introduction to data science: joy with dice game
 
 #### APPS TROUBLES
 
@@ -68,10 +72,6 @@ pytacz
 pytcalc
 
 - better handle user input operation
-
-dice-prob
-
-- introduction to data science: joy with dice game
 
 ### GAMES
 
