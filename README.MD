@@ -117,6 +117,23 @@ dice-prob
 
 INSPIRED BY [Kamil Brzeziński](https://github.com/kamilbrzezinski/python-5-projektow/blob/master/01-wisielec.py)
 
+2. poker
+    ```
+                2 ♥                3 ♥                4 ♥                5 ♥                
+                6 ♥                7 ♥                8 ♥                9 ♥                
+                10 ♥               J ♥                Q ♥                K ♥ 
+    ```
+
+    - DESCRIPTION
+        - Play from poker
+
+   - CHANGELOG
+        - 0.1 App essentials: only deck, no game
+
+
+INSPIRED BY [Python for Programmers
+Deitel Developer Series](https://github.com/pdeitel/PythonForProgrammers/tree/master/examples/ch10)
+
 ### TRAINING
 
 Training python programs
