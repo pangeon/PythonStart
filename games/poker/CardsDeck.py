@@ -20,6 +20,9 @@ class CardsDeck:
         self._current_card = 0
         random.shuffle(self._cards_deck)
 
+    def get_random_card(self, item_position):
+        return self._cards_deck[item_position]
+
     def next_card(self):
         """Return single card from deck"""
         try:
