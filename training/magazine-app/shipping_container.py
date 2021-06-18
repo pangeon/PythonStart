@@ -19,13 +19,13 @@ class ShippingContainer:
 
 
     @classmethod
-    def create_with_items(cls, owner_code, items):
-        return cls(owner_code, contents=list(items))
+    def create_with_items(cls, owner_code, items, **kwargs):
+        return cls(owner_code, contents=list(items), **kwargs)
 
 
     @classmethod
-    def create_empty(cls, owner_code):
-        return cls(owner_code, contents=[])
+    def create_empty(cls, owner_code, **kwargs):
+        return cls(owner_code, contents=[], **kwargs)
 
     def __init__(self, owner_code, contents):
         self.owner_code = owner_code
