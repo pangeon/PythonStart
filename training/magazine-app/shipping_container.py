@@ -17,9 +17,11 @@ class ShippingContainer:
         ShippingContainer.next_serial += 1
         return result
 
+
     @classmethod
     def create_with_items(cls, owner_code, items):
         return cls(owner_code, contents=list(items))
+
 
     @classmethod
     def create_empty(cls, owner_code):
@@ -28,10 +30,11 @@ class ShippingContainer:
     def __init__(self, owner_code, contents):
         self.owner_code = owner_code
         self.contents = contents
-        self.bic = ShippingContainer._make_code_bic(
+        self.bic = self._make_code_bic(
             owner_code=owner_code,
             serial=ShippingContainer._generate_serial()
         )
+
 
 container = ShippingContainer("FRU", ["bananas", "apples", "peaches"])
 print(1, container.owner_code, container.contents, container.bic)
