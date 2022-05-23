@@ -1,7 +1,8 @@
 variable = input("Enter sample text or number: ")
 var_type = None
 
-while (var_type != "int" or var_type != "str" or var_type != float):
+while (var_type != "int" or var_type != "str" or var_type != float): 
+    # pętla działa dopóki nie wpiszesz którejś z trzech wymienionych wartości
     var_type = input("Whats is your variable type ? (int, str, float): ")
 
     if(var_type == "int"):
