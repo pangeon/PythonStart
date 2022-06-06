@@ -2,7 +2,6 @@
 # wpiszemy do konsoli, dodając wybrany tekst zachęty: "Enter sample text or number: " 
 variable = input("Enter sample text or number: ") 
 
-
 print('You just wrote:', variable) # program wypisze treść zmiennej, powtórzy de facto to co napisaliśmy
 print('Type of your variable is:', type(variable)) # metoda type sprawdzi typ zmiennej 
 
